@@ -5,6 +5,7 @@ const Mutation = require('./resolvers/Mutation')
 const Subscription = require('./resolvers/Subscription')
 const User = require('./resolvers/User')
 const Link = require('./resolvers/Link')
+const Vote = require('./resolvers/Vote')
 
 const server = new GraphQLServer({
   typeDefs: './src/schema.graphql',
@@ -14,6 +15,7 @@ const server = new GraphQLServer({
     Subscription, 
     User, 
     Link,
+    Vote,
   },
   context: request => {
     return {
